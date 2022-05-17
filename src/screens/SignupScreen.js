@@ -1,8 +1,24 @@
 import React from 'react';
-import { View, StyleSheet, Text } from 'react-native';
+import { View, StyleSheet, Text, Button } from 'react-native';
 
-const SingupScreen = () => {
-  return <Text style={{ fontSize: 48 }}>SingupScreen</Text>;
+const SingupScreen = ({ navigation }) => {
+  return (
+    <>
+      <Text style={{ fontSize: 48 }}>SignupScreen</Text>
+      <Button
+        title="Go to Signin"
+        onPress={() => {
+          navigation.navigate('Signin');
+        }}
+      />
+      <Button
+        title="Go to mainFLow"
+        onPress={() => {
+          navigation.navigate('mainFlow');
+        }}
+      />
+    </>
+  );
 };
 
 const styles = StyleSheet.create({});
